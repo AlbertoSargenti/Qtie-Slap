@@ -400,8 +400,7 @@
                 "Vector2SnapToGrid",
                 "Vector3ClampMagnitudeXZ",
                 "Vector3SnapToGrid",
-		"GetPosition2d",
-		"AlignToDirection"
+		"GetPosition2d"
             ]
         }
     ]

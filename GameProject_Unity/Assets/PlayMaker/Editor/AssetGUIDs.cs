@@ -46,22 +46,21 @@ namespace HutongGames.PlayMakerEditor
         public static string PlayMakerStudentUnitypackage189 = "22e8745ba9787ac419ff0322c9c1340d";
         public static string PlayMakerUnitypackage190 = "cf739c5501a07794bb9fc605438c0eb9";           
         public static string PlayMakerStudentUnitypackage190 = "158721eab71f1714c9676bb47ac2a371";   
-        public static string PlayMakerUnitypackage191 = "39bb10697963712438a72dd20e0435c9";           
-        public static string PlayMakerStudentUnitypackage191 = "a0f1983f3632a6d4eb4779df06b35e65";   
 
         // Latest Install
 
-        public static string PlayMakerUnitypackage192 = "8e350883416051c4185c056cafb17382";           
-        public static string PlayMakerStudentUnitypackage192 = "5397507c2e0c8754aa77587c490e44b2";   
-        
+        public static string PlayMakerUnitypackage191 = "39bb10697963712438a72dd20e0435c9";           
+        public static string PlayMakerStudentUnitypackage191 = "019f903fe4e439b40903aa1bafe45aa1";   
+               
+
         public static string LatestInstall
         {
-            get { return PlayMakerUnitypackage192; }
+            get { return PlayMakerUnitypackage191; }
         }
 
         public static string LatestStudentInstall
         {
-            get { return PlayMakerStudentUnitypackage192; }
+            get { return PlayMakerStudentUnitypackage191; }
         }
 
         public static bool IsStudentVersionInstall()

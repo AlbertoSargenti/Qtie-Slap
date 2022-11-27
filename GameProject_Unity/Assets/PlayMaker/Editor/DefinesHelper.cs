@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -17,13 +16,13 @@ namespace HutongGames.PlayMakerEditor
             {
                 if (!IsValidBuildTargetGroup(group)) continue;
 
-                var defineSymbols = GetDefines(group);
+                var defineSymbols = PlayerSettings.GetScriptingDefineSymbolsForGroup(group).Split(';').Select(d => d.Trim()).ToList();
                 if (!defineSymbols.Contains(defineSymbol))
                 {
                     defineSymbols.Add(defineSymbol);
                     try
                     {
-                        SetDefines(group, defineSymbols);
+                        PlayerSettings.SetScriptingDefineSymbolsForGroup(group, string.Join(";", defineSymbols.ToArray()));
                     }
                     catch (Exception)
                     {
@@ -40,70 +39,13 @@ namespace HutongGames.PlayMakerEditor
             {
                 if (!IsValidBuildTargetGroup(group)) continue;
 
-                var defineSymbols = GetDefines(group);
+                var defineSymbols = PlayerSettings.GetScriptingDefineSymbolsForGroup(group).Split(';').Select(d => d.Trim()).ToList();
                 if (defineSymbols.Contains(defineSymbol))
                 {
                     defineSymbols.Remove(defineSymbol);
-                    SetDefines(group, defineSymbols);
+                    PlayerSettings.SetScriptingDefineSymbolsForGroup(group, string.Join(";", defineSymbols.ToArray()));
                 }
             }
-        }
-
-        public static void AddSymbol(string define)
-        {
-            var definesList = GetDefines();
-            if (!definesList.Contains(define))
-            {
-                definesList.Add(define);
-                SetDefines(definesList);
-            }
-        }
-
-        public static void RemoveSymbol(string define)
-        {
-            var definesList = GetDefines();
-            if (definesList.Contains(define))
-            {
-                definesList.Remove(define);
-                SetDefines(definesList);
-            }
-        }
-
-        public static List<string> GetDefines()
-        {
-            return GetDefines(EditorUserBuildSettings.activeBuildTarget);
-        }
-
-        public static List<string> GetDefines(BuildTarget target)
-        {
-            return GetDefines(BuildPipeline.GetBuildTargetGroup(target));
-        }
-
-        public static List<string> GetDefines(BuildTargetGroup buildTargetGroup)
-        {
-            var defines = PlayerSettings.GetScriptingDefineSymbolsForGroup(buildTargetGroup);
-            return defines.Split(';').Select(d => d.Trim()).ToList();
-        }
-
-        public static void SetDefines(List<string> definesList)
-        {
-            var target = EditorUserBuildSettings.activeBuildTarget;
-            var buildTargetGroup = BuildPipeline.GetBuildTargetGroup(target);
-            var defines = string.Join(";", definesList.ToArray());
-            PlayerSettings.SetScriptingDefineSymbolsForGroup(buildTargetGroup, defines);
-        }
-
-        public static void SetDefines(BuildTarget target, List<string> definesList)
-        {
-            var buildTargetGroup = BuildPipeline.GetBuildTargetGroup(target);
-            var defines = string.Join(";", definesList.ToArray());
-            PlayerSettings.SetScriptingDefineSymbolsForGroup(buildTargetGroup, defines);
-        }
-
-        public static void SetDefines(BuildTargetGroup buildTargetGroup, List<string> definesList)
-        {
-            var defines = string.Join(";", definesList.ToArray());
-            PlayerSettings.SetScriptingDefineSymbolsForGroup(buildTargetGroup, defines);
         }
 
         private static bool IsValidBuildTargetGroup(BuildTargetGroup group)
