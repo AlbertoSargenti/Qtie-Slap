@@ -4,10 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Slap
   - Punch
   - Bud
   - Kick
+  - Slap R to L
+  - Slap L to R
+  - Enemy
   layers:
   - Default
   - TransparentFX
