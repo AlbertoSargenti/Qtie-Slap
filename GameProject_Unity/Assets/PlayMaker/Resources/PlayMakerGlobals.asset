@@ -19,7 +19,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 7
+      value: 10
     intVariables:
     - useVariable: 1
       name: Player HP
@@ -58,19 +58,19 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 0
-    - useVariable: 1
-      name: Wrong L Punch
-      tooltip: 
-      showInInspector: 0
-      networkSync: 0
-      value: 0
     stringVariables: []
     vector2Variables: []
     vector3Variables: []
     colorVariables: []
     rectVariables: []
     quaternionVariables: []
-    gameObjectVariables: []
+    gameObjectVariables:
+    - useVariable: 1
+      name: Player Hitbox
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
     objectVariables: []
     materialVariables: []
     textureVariables: []
@@ -78,5 +78,5 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
   events: []
