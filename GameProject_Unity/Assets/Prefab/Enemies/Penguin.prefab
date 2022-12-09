@@ -801,7 +801,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -1170,7 +1170,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -1571,7 +1571,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -1605,7 +1605,7 @@ MonoBehaviour:
         - Double-click to edit comment.
         - Double-click to edit comment.
         - 
-        byteData: 0000000000000000000000000000000500000000000000000400000000000000000000000000000000
+        byteData: 0000000000000000000000010000000500000000000000000400000000000000000000000001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -1985,7 +1985,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -2531,7 +2531,25 @@ MonoBehaviour:
         animationCurveParams:
         - curve:
             serializedVersion: 2
-            m_Curve: []
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 2
+              outSlope: 2
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: -0.14513786
+              outSlope: -0.14513786
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.325
+              outWeight: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
             m_RotationOrder: 4
@@ -2587,7 +2605,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           enumName: HutongGames.EasingFunction+Ease
-          intValue: 21
+          intValue: 32
         fsmFloatParams:
         - useVariable: 0
           name: 
@@ -2600,7 +2618,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 15
+          value: 10
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -2608,7 +2626,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 0
@@ -2805,7 +2823,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -2824,7 +2842,7 @@ MonoBehaviour:
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
-    handleTriggerStay: 1
+    handleTriggerStay: 0
     handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
@@ -2833,7 +2851,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
