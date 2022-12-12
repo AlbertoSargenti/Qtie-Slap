@@ -26,7 +26,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 3
     boolVariables:
     - useVariable: 1
       name: Wrong Slap to L
