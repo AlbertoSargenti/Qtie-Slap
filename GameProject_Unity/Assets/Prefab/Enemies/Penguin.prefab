@@ -479,6 +479,7 @@ GameObject:
   - component: {fileID: 288007829224701143}
   - component: {fileID: 261151523136743120}
   - component: {fileID: 6920369305076273982}
+  - component: {fileID: 2580510721433601846}
   m_Layer: 4
   m_Name: Penguin
   m_TagString: Enemy
@@ -2290,7 +2291,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 3
         - useVariable: 0
           name: 
           tooltip: 
@@ -2720,7 +2721,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 10
+          value: 7
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -3417,6 +3418,20 @@ CapsuleCollider:
   m_Height: 1.9201512
   m_Direction: 1
   m_Center: {x: 0, y: 0.8219864, z: 0}
+--- !u!114 &2580510721433601846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282438078516129269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1079068393, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 288007829224701141}
 --- !u!1 &282471112549186691
 GameObject:
   m_ObjectHideFlags: 0
